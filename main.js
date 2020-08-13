@@ -148,7 +148,7 @@ async function command(message)
             }
 
             message.channel.send("Shutting Down...");
-            await utils.sleep(500);
+            await utils.sleep(1000);
             console.log("Good Night...")
             process.exit(1);
             break;
