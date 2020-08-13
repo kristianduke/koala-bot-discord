@@ -158,3 +158,13 @@ module.exports.roleAdd = function roleAdd(message, userID, role){ //user can be 
         return(false);
     }
 }
+
+// --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+
+module.exports.bytesToMB = function bytesToMB(bytes, rounded) {
+    if(rounded){
+        return(Math.round(bytes / Math.pow(2, 20)));
+    } else {
+        return(bytes / Math.pow(2, 20));
+    }
+}

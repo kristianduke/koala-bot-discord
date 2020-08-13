@@ -162,7 +162,7 @@ async function command(message)
             }
 
             message.channel.send(utils.embedText("Host Info", "Hostname: " + os.hostname() + "\nOS Platform: " + os.platform() + "\nOS Name: " + os.type() + 
-            "\nUptime: " + os.uptime() + " Seconds\nTotal System Memory: " + os.totalmem() + " Bytes\nFree System Memory: " + os.freemem() + " Bytes"));
+            "\nUptime: " + os.uptime() + " Seconds\nTotal System Memory: " + utils.bytesToMB(os.totalmem(), true) + "MB\nFree System Memory: " + utils.bytesToMB(os.freemem(), true) + "MB"));
             
             break;
     }
