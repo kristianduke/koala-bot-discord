@@ -3,6 +3,7 @@ const utils = require("./modules/utilities");
 const errRtn = require("./modules/errorReturns")
 const colors = require("./modules/colors")
 const news = require("./modules/news")
+const os = require("os")
 
 const Discord = require("discord.js");
 const client = new Discord.Client();
@@ -153,6 +154,17 @@ async function command(message)
             break;
 
         // --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+
+        case "hostinfo":
+            if (message.author.id !== OwnerID) { //Makes sure user is admin (of bot)
+                message.reply(errRtn.returnAdminCommand());
+                return;
+            }
+
+            message.channel.send(utils.embedText("Host Info", "Hostname: " + os.hostname() + "\nOS Platform: " + os.platform() + "\nOS Name: " + os.type() + 
+            "\nUptime: " + os.uptime() + " Seconds\nTotal System Memory: " + os.totalmem() + " Bytes\nFree System Memory: " + os.freemem() + " Bytes"));
+            
+            break;
     }
 }
 

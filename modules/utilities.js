@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const 
+const OS = require("os")
 
 module.exports.sleep = function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
