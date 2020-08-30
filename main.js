@@ -14,6 +14,10 @@ var prefix = "!";
 
 async function command(message)
 {
+    if(message.content.substr(0, prefix.length) != prefix) {
+        return;
+    }
+
     let args = message.content.substring(prefix.length).split(" ");
 
     switch(args[0]) {
