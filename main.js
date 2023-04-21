@@ -8,7 +8,7 @@ const os = require("os")
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
-const OwnerID = "205980203153883138";
+const OwnerID = "OWNERID";
 
 var prefix = "!";
 
@@ -180,4 +180,4 @@ client.on("message", message=> {
     command(message);
 })
 
-client.login("NTA2ODY4ODY2MDAyMDU5Mjc0.W9iIag.JF-ub_wF3tMtqIGrl3QRh254DH4"); //Must be on last line
+client.login("TOKEN"); //Must be on last line
